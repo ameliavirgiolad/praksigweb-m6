@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Rekomendasi Tempat Wisata dan Kuliner di Yogyakarta</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+
+ <style>
+    html, body, section
+    {
+        position: relative;
+        height: 100%;
+        background-color: #e3dac9;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    #map {
+    width: 1100px;
+    height: 500px;
+    margin-top: 70px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    
+    <center>
+        <h1 style="color:rgb(255, 245, 238));"><b>PETA PERSEBARAN WISATA DAN KULINER FAVORIT DI YOGYAKARTA</b></h3>
+		<div id="map"></div>
+    </center>
+	<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+    <script>
+        var map = L.map('map',{
+        center: [-7.764038654325745, 110.3831644682195],
+        zoom: 15
+        });
+
+        L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 25, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+        
+        L.marker([-7.782910097927375, 110.36707421946431])
+            .bindPopup('<center><img src="tugujogja.jpg" width="300px" height="200px" title="Tugu Yogyakarta" alt="Tugu Yogyakarta"></center><h1>Tugu Yogyakarta</h1>')
+            .addTo(map)
+		L.marker([-7.801140428299908, 110.36471803778748])
+            .bindPopup('<center><img src="titiknol.jpg" width="300px" height="200px" title="Titik Nol Kilometer Yogyakarta" alt="Titik Nol Kilometer Yogyakarta"></center><h1>Titik Nol Kilometer Yogyakarta</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.80520, 110.36402])
+            .bindPopup('<center><img src="keraton.jpg" width="300px" height="200px" title="Keraton Ngayogyakarta Hadiningrat" alt="Keraton Ngayogyakarta Hadiningrat"></center><h1>Keraton Ngayogyakarta Hadiningrat</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.80900, 110.35987])
+            .bindPopup('<center><img src="tamansari.jpg" width="300px" height="200px" title="Taman Sari" alt="Taman Sari"></center><h1>Taman Sari</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.802454723312084, 110.39197845293432])
+            .bindPopup('<center><img src="gembiraloka.jpg" width="300px" height="200px" title="Gembira Loka Zoo" alt="Gembira Loka Zoo"></center><h1>Gembira Loka Zoo</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.80384, 110.36238])
+            .bindPopup('<center><img src="masjid.jpg" width="300px" height="200px" title="Masjid Gedhe Kauman" alt="Masjid Gedhe Kauman"></center><h1>Masjid Gedhe Kauman</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.81191, 110.36323])
+            .bindPopup('<center><img src="alunkidul.jpg" width="300px" height="200px" title="Alun-Alun Kidul" alt="Alun-Alun Kidul"></center><h1>Alun-Alun Kidul</h1><p></p>')
+            .addTo(map)	
+		L.marker([-7.76272, 110.37964])
+            .bindPopup('<center><img src="tempogelato.jpg" width="300px" height="200px" title="Tempo Gelato Kaliurang" alt="Tempo Gelato Kaliurang"></center><h1>Tempo Gelato Kaliurang</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.78517, 110.37154])
+            .bindPopup('<center><img src="raminten.jpg" width="300px" height="200px" title="The House of Raminten" alt="The House of Raminten"></center><h1>The House of Raminten</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.75747, 110.37738])
+            .bindPopup('<center><img src="jatinangor.jpg" width="300px" height="200px" title="Jatinangor House" alt="Jatinangor House"></center><h1>Jatinangor House</h1><p></p>')
+            .addTo(map)
+		L.marker([-7.76555, 110.38020])
+            .bindPopup('<center><img src="gudeg.jpg" width="300px" height="200px" title="Gudeg Yu Djum" alt="Gudeg Yu Djum"></center><h1>Gudeg Yu Djum</h1><p></p>')
+            .addTo(map)		
+    </script>
+
+
+</body>
+</html>
